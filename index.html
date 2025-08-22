@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Queen’s Enhancer</title>
+  <style>
+    :root{
+      --black:#000;
+      --ink:#0a0a0a;
+      --ink-2:#121212;
+      --muted:#9aa0a6;
+      --fg:#f5f7fb;
+      --blue:#1f6ae6;
+      --gold:#f5bd1f;
+    }
+    html,body{margin:0;padding:0;background:#000;color:var(--fg);font:14px/1.5 -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,Inter,system-ui}
+    .wrap{
+      min-width: 310px; max-width: 360px;
+      background: radial-gradient(400px 200px at -10% -20%, rgba(31,106,230,.15), transparent 60%),
+                  radial-gradient(300px 160px at 120% 0%, rgba(245,189,31,.12), transparent 60%),
+                  linear-gradient(180deg, var(--black), var(--ink));
+      border:1px solid #171717; border-radius:16px; padding:18px; box-shadow:0 10px 40px rgba(0,0,0,.6);
+    }
+    .brand{display:flex;gap:12px;align-items:center;margin-bottom:12px}
+
+    /* UPDATED: logo container becomes a circular frame that holds the image */
+    .logo{
+      width:40px;height:40px;border-radius:12px;display:grid;place-items:center;
+      background: var(--ink-2); /* filled circle */
+      border: 1px solid #1a1a1a;
+      box-shadow:0 6px 18px rgba(31,106,230,.25), inset 0 0 12px rgba(255,255,255,.08);
+      overflow:hidden; /* clip the image to the rounded shape */
+    }
+    .logo img{
+      width:100%; height:100%;
+      object-fit: cover; /* fill the circle nicely */
+      display:block;
+    }
+
+    h1{font-size:16px;font-weight:700;margin:0}
+    .sub{color:var(--muted);font-size:12.5px;margin-top:2px}
+    .card{background:linear-gradient(180deg,#0a0a0a,#0e0e0e);border:1px solid #1a1a1a;border-radius:12px;padding:12px;margin-top:12px}
+    .kbd{display:inline-flex;align-items:center;gap:6px;padding:8px 10px;border-radius:10px;border:1px solid #1f1f1f;background:#0f0f0f;color:#e8eaed;font-weight:700}
+    .keys{display:flex;gap:8px;align-items:center;margin:8px 0 2px}
+    .pill{display:inline-block;padding:2px 8px;border-radius:999px;background:#111;border:1px solid #191919;color:#c9ced6;font-size:11px}
+    a{color:#e6ecff;text-decoration:none}
+    a:hover{color:#fff}
+    .ig{
+      display:flex;align-items:center;gap:8px;margin-top:10px;padding:10px;border-radius:10px;border:1px solid #1a1a1a;background:linear-gradient(180deg,#0b0b0b,#0f0f0f);
+    }
+    .ig svg{width:18px;height:18px}
+    .footer{margin-top:12px;color:#aab2bd;font-size:11.5px}
+    .muted{color:var(--muted)}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="brand">
+      <!-- UPDATED: image placed inside the circular .logo container -->
+      <div class="logo">
+        <img src="icons/Logo.png" alt="Queen’s Enhancer logo" width="40" height="40" />
+      </div>
+      <div>
+        <h1>Queen’s Enhancer</h1>
+        <div class="sub">Premium overlays for Housing, SOLUS & more.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="pill">Toggle overlay</div>
+      <div class="keys" id="keys">
+        <!-- populated by popup.js -->
+      </div>
+      <div class="muted" style="font-size:12px;margin-top:2px">Use this keyboard shortcut on supported pages.</div>
+    </div>
+
+    <a class="ig" href="https://instagram.com/debatemyroomba" target="_blank" rel="noopener">
+      <!-- Instagram icon -->
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true">
+        <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+      </svg>
+      <div>
+        <div style="font-weight:700">Instagram</div>
+        <div class="muted">@debatemyroomba</div>
+      </div>
+    </a>
+
+    <!-- UPDATED: mailto link for Abdullah Khan -->
+    <div class="footer">
+      Made by <strong><a href="mailto:abdullah.khan@queensu.ca">Abdullah Khan</a></strong>, Computer Engineer @ Queen’s.
+    </div>
+  </div>
+
+  <script src="popup.js" defer></script>
+</body>
+</html>
