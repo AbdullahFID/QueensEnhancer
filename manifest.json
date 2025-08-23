@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Queen's Enhancer — Premium View",
-  "version": "1.5.0",
+  "version": "2",
   "description": "Beautiful, fast overlays for Queen's portals (Housing, SOLUS, more).",
   "permissions": ["storage"],
   "host_permissions": [
