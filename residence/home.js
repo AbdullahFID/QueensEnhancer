@@ -1,4 +1,5 @@
 // === Queen's Housing — Premium View (Complete Version with All Features) ===
+// residence/home.js
 (() => {
   if (window.__qhxInitialized) return;
   window.__qhxInitialized = true;

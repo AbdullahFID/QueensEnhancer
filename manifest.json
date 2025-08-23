@@ -2,13 +2,13 @@
   "manifest_version": 3,
   "name": "Queen's Enhancer — Premium View",
   "version": "1.5.0",
-  "description": "Beautiful, fast overlays for Queen’s portals (Housing, SOLUS, more).",
+  "description": "Beautiful, fast overlays for Queen's portals (Housing, SOLUS, more).",
   "permissions": ["storage"],
   "host_permissions": [
     "https://studentweb.housing.queensu.ca/*"
   ],
   "action": {
-    "default_title": "Queen’s Enhancer",
+    "default_title": "Queen's Enhancer",
     "default_popup": "index.html"
   },
   "content_scripts": [
@@ -17,11 +17,11 @@
       "js": [
         "shared.js",
         "residence/home.js",
-        "residence/index.js",
-        "index.js",
+        "residence/editprofile.js",
+        "residence/poa.js",
         "content.js"
       ],
-      "run_at": "document_idle"
+      "run_at": "document_start"
     }
   ],
   "content_security_policy": {
